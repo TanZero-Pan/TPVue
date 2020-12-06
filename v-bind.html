@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom元素的属性绑定</title>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-bind:value="msg">
+        <input type="text" :value="msg"> <!-- v-bind可缩写为： -->
+        <a v-bind:href="vhref">baidu</a>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg:'this is a v-bind',
+                vhref:'http://www.baidu.com'
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
